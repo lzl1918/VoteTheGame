@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Title</title>
+
+    <!--<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="lib/npstrap/css/controls.min.css" />
+    <link rel="stylesheet" href="lib/npstrap/css/general.min.css" />
+    <link rel="stylesheet" href="css/index.min.css" />
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-ext/jquery.form.js"></script>
+    <script src="lib/jquery-ext/jquery.throttle-debounce.min.js"></script>
+    <script src="lib/jquery-ext/jquery.md5.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/npstrap/js/dataset_helper.js"></script>
+    <script src="lib/npstrap/js/handlerbase.js"></script>
+    <script src="lib/npstrap/js/controls.es5.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="page-background">
+        <div class="left-background"></div>
+        <div class="right-background"></div>
+    </div>
+    <div class="center-content">
+        <span class="title">TITLE HERE AND YOU CAN SE THE DIFFERENCE IF IT IS VERY LONG</span>
+        <div class="lrholder">
+            <div class="container left">
+                <div class="float">
+
+                </div>
+                <img src="images/sample.gif" />
+                <span class="count">1045</span>
+            </div>
+            <div class="container right">
+                <div class="float">
+
+                </div>
+                <img src="images/sample.gif" />
+                <span class="count">1045</span>
+            </div>
+        </div>
+
+        <div class="throughbar">
+            <div class="progress"></div>
+        </div>
+
+        <div id="btn_edit" data-control="button" data-text="修改设定"></div>
+    </div>
+
+    <div id="settings" style="display: none">
+        <div class="set-cont">
+            <form id="submit-form" method="post" action="/game/submit">
+                <p>标题</p>
+                <input name="title" type="text" />
+                <div class="picsel">
+                    <div class="set-left" style="margin-right: 1em;">
+                        <p>左</p>
+                        <div id="btn_leftpic" data-control="button" data-text="选择文件"></div>
+                        <input name="leftpic" type="file" style="display: none" />
+                        <img src="images/sampleleft.jpg"/>
+                    </div>
+                    <div class="set-right" style="margin-left: 1em; text-align: right;">
+                        <p>右</p>
+                        <div id="btn_rightpic" data-control="button" data-text="选择文件"></div>
+                        <input name="rightpic" type="file" style="display: none" />
+                        <img src="images/sampleright.jpg"/>
+                    </div>
+                </div>
+            </form>
+            <div class="btns">
+                <div id="btn_submit" data-control="button" data-text="提交" data-accent="true"></div>
+                <div id="btn_cancel" data-control="button" data-text="放弃"></div>
+            </div>
+            <p id="error_hint">提示内容</p>
+        </div>
+    </div>
+</body>
+</html>
